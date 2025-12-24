@@ -166,12 +166,20 @@ This project demonstrates a first-principles understanding of optimization, show
 
 ---
 
-## Future Extensions
+## Results
 
-- Strong Wolfe line search
-- Quasi-Newton methods (BFGS)
-- Multiclass logistic regression
-- Line search–based training of shallow neural networks
+Experiments were conducted on the Breast Cancer Wisconsin dataset using a 75/25 train–test split with standardized features.
+
+| Method | Converged | Iterations | Test Accuracy |
+|------|-----------|------------|---------------|
+| Gradient Descent (fixed lr = 1e-2) | No | 8000 | 0.951 |
+| Gradient Descent + Line Search | Yes | 750 | 0.951 |
+| Newton’s Method + Line Search | Yes | 9 | 0.951 |
+
+**Key observations:**
+- Fixed-step gradient descent required extensive tuning and failed to converge within the iteration budget.
+- Backtracking line search reduced the number of iterations by over **10×** while maintaining identical predictive performance.
+- Newton’s method combined with line search achieved convergence in fewer than **10 iterations**, illustrating the effectiveness of second-order optimization when paired with adaptive step-size selection.
 
 ---
 
