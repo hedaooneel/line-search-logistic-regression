@@ -1,0 +1,32 @@
+{
+  "GD_fixed_lr=1e-2": {
+    "converged": false,
+    "iters": 8000,
+    "test_accuracy": 0.951048951048951,
+    "final_loss": 0.09345362852256131,
+    "final_grad_norm": 0.003284190214238828,
+    "n_fev": 8001,
+    "n_gev": 8000,
+    "n_hev": null
+  },
+  "GD_line_search": {
+    "converged": true,
+    "iters": 750,
+    "test_accuracy": 0.951048951048951,
+    "final_loss": 0.09316828237674005,
+    "final_grad_norm": 9.945162151371762e-07,
+    "n_fev": 1499,
+    "n_gev": 750,
+    "n_hev": null
+  },
+  "Newton_line_search": {
+    "converged": true,
+    "iters": 9,
+    "test_accuracy": 0.951048951048951,
+    "final_loss": 0.09316828232924942,
+    "final_grad_norm": 1.0448436163679944e-12,
+    "n_fev": 17,
+    "n_gev": 9,
+    "n_hev": 8
+  }
+}
