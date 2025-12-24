@@ -183,6 +183,20 @@ Experiments were conducted on the Breast Cancer Wisconsin dataset using a 75/25 
 
 ---
 
+## Visuals
+
+### Loss vs iteration (real dataset)
+This highlights the large convergence gap between fixed-step GD, line-search GD, and Newton + line search.
+
+![Loss vs Iteration](results/plots/loss_vs_iter.png)
+
+### Step size $\(\alpha_k\)$ chosen by line search
+Early iterations may shrink $\(\alpha\)$ for stability; near the optimum, line search often accepts $\(\alpha \approx 1\)$.
+
+![Alpha vs Iteration](results/plots/alpha_vs_iter.png)
+
+---
+
 ## Author
 
 Neel Hedaoo
