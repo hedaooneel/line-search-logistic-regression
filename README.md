@@ -42,42 +42,42 @@ Across multiple datasets and experimental settings, line search consistently imp
 
 ### Logistic Regression Objective
 
-For data points \((x_i, y_i)\) with \(y_i \in \{0,1\}\), the objective function minimized is:
+For data points $\((x_i, y_i)\)$ with $\(y_i \in \{0,1\}\)$, the objective function minimized is:
 
-\[
+$$\[
 f(w, b) =
 -\frac{1}{n} \sum_{i=1}^{n}
 \left[
 y_i \log(p_i) + (1 - y_i)\log(1 - p_i)
-\right]
-+ \frac{\lambda}{2}\|w\|_2^2
-\]
+\right]$$
++ $$\frac{\lambda}{2}\|w\|_2^2
+\]$$
 
 where:
 
-\[
+$$\[
 p_i = \sigma(w^T x_i + b)
-\]
+\]$$
 
-and \(\sigma(\cdot)\) is the sigmoid function.
+and $$\(\sigma(\cdot)\)$$ is the sigmoid function.
 
 ---
 
 ### Backtracking Line Search (Armijo Condition)
 
-At each iteration, the step size \(\alpha_k\) is chosen to satisfy:
+At each iteration, the step size $\(\alpha_k\)$ is chosen to satisfy:
 
-\[
+$$\[
 f(x_k + \alpha_k p_k)
 \le
 f(x_k) + c\,\alpha_k \nabla f(x_k)^T p_k
-\]
+\]$$
 
 with parameters:
 
-- Initial step size: \(\alpha_0 = 1\)  
-- Shrinkage factor: \(\beta \in (0,1)\)  
-- Sufficient decrease constant: \(c \in (0,1)\)  
+- Initial step size: $\(\alpha_0 = 1\) $ 
+- Shrinkage factor: $\(\beta \in (0,1)\) $ 
+- Sufficient decrease constant: $\(c \in (0,1)\)$ 
 
 This guarantees descent whenever the search direction is valid and removes the need for manual learning-rate tuning.
 
@@ -98,14 +98,14 @@ This guarantees descent whenever the search direction is valid and removes the n
 ### Convergence Analysis
 - Loss vs iteration  
 - Gradient norm vs iteration  
-- Step size \(\alpha_k\) vs iteration  
+- Step size $\(\alpha_k\)$ vs iteration  
 
 ### Feature Scaling Sensitivity
 - Standardized vs unscaled features  
 - Comparison of convergence stability  
 
 ### Regularization Sensitivity
-- Multiple \(\lambda\) values  
+- Multiple $\(\lambda\)$ values  
 - Impact on curvature and step size  
 
 ### Performance Metrics
